@@ -10,6 +10,8 @@ spec:
   selector:
     matchLabels:
       app: hello-app1
+  strategy:
+    type: RollingUpdate
   template:
     metadata:
       labels:
