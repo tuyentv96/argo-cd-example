@@ -2,5 +2,9 @@ namespace: argocd
 resources:
 - deployment.yaml
 - secrets.yaml
+configMapGenerator:
+- name: app-env
+  envs:
+  - files/app.env
 images:
 - name: nginx

@@ -39,4 +39,6 @@ spec:
         envFrom:
         - secretRef:
             name: mysecret2
+        - configMapRef:
+            name: app-env
 ---
