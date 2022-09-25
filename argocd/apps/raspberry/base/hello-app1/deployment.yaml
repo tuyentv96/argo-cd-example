@@ -17,13 +17,9 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
         ports:
         - containerPort: 80
-        env:
-        - name: foo
-          valueFrom:
-            secretKeyRef:
-              name: mysecret2
-              key: foo
+        envFrom:
+        - secretRef:
+            name: mysecret 
 ---
