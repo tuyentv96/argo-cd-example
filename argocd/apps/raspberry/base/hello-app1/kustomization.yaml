@@ -1,3 +1,4 @@
 namespace: argocd
 resources:
 - deployment.yaml
+- secrets.yaml
