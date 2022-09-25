@@ -3,3 +3,11 @@ kind: Kustomization
 namespace: argocd
 resources:
 - ../../base/hello-app1
+configMapGenerator:
+- name: app-env
+  envs:
+  - files/app.env
+images:
+- name: nginx
+  newName: nginx
+  newTag: "1.23.1"

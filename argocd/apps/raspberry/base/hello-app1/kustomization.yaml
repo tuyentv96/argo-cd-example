@@ -2,3 +2,5 @@ namespace: argocd
 resources:
 - deployment.yaml
 - secrets.yaml
+images:
+- name: nginx
