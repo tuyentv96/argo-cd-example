@@ -14,3 +14,9 @@ spec:
     path: argocd/apps/app-1
     repoURL: https://github.com/tuyentv96/argo-cd-example
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
