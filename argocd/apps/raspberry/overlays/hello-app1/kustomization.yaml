@@ -5,6 +5,12 @@ namespace: argocd
 resources:
 - ../../base/hello-app1
 
+configMapGenerator:
+- name: app-env
+  behavior: merge
+  envs:
+  - files/app.env
+
 patches:
 - path: deployment.yaml
 
