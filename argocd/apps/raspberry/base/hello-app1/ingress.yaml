@@ -9,5 +9,7 @@ spec:
       paths:
         - path: /apple
           backend:
-            serviceName: hello-app1
-            servicePort: 80
+            service:
+              name: hello-app1
+              port:
+                number: 80
