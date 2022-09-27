@@ -16,5 +16,5 @@ patches:
 
 images:
 - name: nginx
-  newName: nginx
+  newName: hashicorp/http-echo
   newTag: "latest"
