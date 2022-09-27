@@ -22,8 +22,6 @@ spec:
       containers:
       - name: nginx
         image: nginx
-        args:
-          - "-listen=:80 -text=hello"
         ports:
         - containerPort: 80
         livenessProbe:
