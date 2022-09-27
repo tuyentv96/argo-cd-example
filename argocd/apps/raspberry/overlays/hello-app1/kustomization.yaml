@@ -17,4 +17,4 @@ patches:
 images:
 - name: nginx
   newName: mendhak/http-https-echo
-  newTag: "latest"
+  newTag: "24"
