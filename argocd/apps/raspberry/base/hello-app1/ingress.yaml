@@ -14,7 +14,7 @@ spec:
   - host: picluster.xyz
     http:
       paths:
-        - path: /apple
+        - path: /
           pathType: Prefix
           backend:
             service:
