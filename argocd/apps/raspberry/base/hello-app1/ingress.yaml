@@ -1,16 +1,15 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: test-ingress
+  name: echo-ingress
   annotations:
-    # use the shared ingress-nginx
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
     kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/cluster-issuer: selfsigned
 spec:
   tls:
-    - secretName: test-ingress-tls
-      hosts:
-        - picluster.xyz
+  - hosts:
+    - picluster.xyz
+    secretName: echo-tls
   rules:
   - host: picluster.xyz
     http:
