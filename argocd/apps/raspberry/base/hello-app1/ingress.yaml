@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - picluster.xyz
+    - app.picluster.xyz
     secretName: hello-app1-tls
   rules:
-  - host: hello-app1.picluster.xyz
+  - host: app.picluster.xyz
     http:
       paths:
         - path: /
