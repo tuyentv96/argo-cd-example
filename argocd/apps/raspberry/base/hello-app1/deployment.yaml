@@ -3,8 +3,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-app1
-  annotations:
-    linkerd.io/inject: enabled
+  # annotations:
+  #   linkerd.io/inject: enabled
   labels:
     app: hello-app1
 spec:
