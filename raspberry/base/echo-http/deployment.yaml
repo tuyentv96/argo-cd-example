@@ -40,7 +40,7 @@ spec:
           failureThreshold: 20
         envFrom:
         - secretRef:
-            name: mysecret2
+            name: mysecret
         - configMapRef:
             name: app-env
 ---
