@@ -1,18 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-project
+  name: argocd
+  namespace: argocd
 spec:
   destination:
+    namespace: argocd
     server: https://kubernetes.default.svc
-    namespace: default
   project: default
   source:
-    path: apps/
+    path: argocd/apps/raspberry/overlays/argocd
     repoURL: https://github.com/tuyentv96/argo-cd-example
     targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
-      selfHeal: true 
+      selfHeal: true
       allowEmpty: true
+    syncOptions:
+      - CreateNamespace=true
