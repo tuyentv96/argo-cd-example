@@ -39,8 +39,8 @@ spec:
           periodSeconds: 3
           failureThreshold: 20
         envFrom:
-        - secretRef:
-            name: mysecret
+        # - secretRef:
+        #     name: mysecret
         - configMapRef:
             name: app-env
 ---
