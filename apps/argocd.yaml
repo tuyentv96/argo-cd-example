@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: echo-http
-  namespace: echo-http
+  name: argocd
+  namespace: argocd
 spec:
   destination:
-    namespace: echo-http
+    namespace: argocd
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: argocd/apps/raspberry/overlays/hello-app
+    path: raspberry/overlays/argocd
     repoURL: https://github.com/tuyentv96/argo-cd-example
     targetRevision: HEAD
   syncPolicy:
