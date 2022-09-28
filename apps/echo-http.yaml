@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: echo-http
+  name: echo3
   namespace: echo-http
 spec:
   destination:
