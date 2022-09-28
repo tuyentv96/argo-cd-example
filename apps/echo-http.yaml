@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: echo-http
   namespace: echo-http
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: echo-http
@@ -16,6 +18,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
-      allowEmpty: true
     syncOptions:
       - CreateNamespace=true
