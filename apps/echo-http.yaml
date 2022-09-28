@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: raspberry/overlays/hello-app
+    path: raspberry/overlays/echo-http
     repoURL: https://github.com/tuyentv96/argo-cd-example
     targetRevision: HEAD
   syncPolicy:

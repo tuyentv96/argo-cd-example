@@ -1,4 +1,4 @@
-namespace: default
+namespace: echo-http
 resources:
 - deployment.yaml
 - service.yaml

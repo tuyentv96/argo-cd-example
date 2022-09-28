@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-app1
+  name: echo-http
 spec:
   replicas: 4
   template:
