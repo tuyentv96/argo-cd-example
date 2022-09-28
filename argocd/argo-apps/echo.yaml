@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: echo
+  namespace: hello-world
+spec:
+  destination:
+    namespace: hello-world
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: argocd/apps/raspberry/overlays/hello-app1
+    repoURL: https://github.com/tuyentv96/argo-cd-example
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: true
+    syncOptions:
+      - CreateNamespace=true
