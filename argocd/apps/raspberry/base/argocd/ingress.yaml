@@ -11,16 +11,16 @@ metadata:
 spec:
   tls:
   - hosts:
-    - app.picluster.xyz
+    - argocd.picluster.xyz
     secretName: hello-app1-tls
   rules:
-  - host: app.picluster.xyz
+  - host: argocd.picluster.xyz
     http:
       paths:
         - path: /
           pathType: Prefix
           backend:
             service:
-              name: hello-app1
+              name: argocd-server
               port:
                 number: 80

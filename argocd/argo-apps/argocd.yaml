@@ -2,16 +2,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: hello-app1
-  namespace: app
+  namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: app
+    namespace: argocd
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: argocd/apps/raspberry/overlays/hello-app1
+    path: argocd/apps/raspberry/overlays/argocd
     repoURL: https://github.com/tuyentv96/argo-cd-example
     targetRevision: HEAD
   syncPolicy:
