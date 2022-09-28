@@ -12,7 +12,7 @@ spec:
   tls:
   - hosts:
     - app.picluster.xyz
-    secretName: hello-app1-prod-tls
+    secretName: hello-app1-tls
   rules:
   - host: app.picluster.xyz
     http:
