@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: argocd/apps/raspberry/overlays/hello-app1
+    path: argocd/apps/raspberry/overlays/hello-app
     repoURL: https://github.com/tuyentv96/argo-cd-example
     targetRevision: HEAD
   syncPolicy:
