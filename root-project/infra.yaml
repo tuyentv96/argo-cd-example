@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: infra
+  name: postgresql
   namespace: argocd
 spec:
   project: default
   source:
-    path: infra
+    path: infra/postgresql
     repoURL: https://github.com/tuyentv96/argo-cd-example
     targetRevision: HEAD
   destination:
