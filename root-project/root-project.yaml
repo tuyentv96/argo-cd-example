@@ -9,10 +9,11 @@ spec:
     path: application-set
     repoURL: https://github.com/tuyentv96/argo-cd-example
     targetRevision: HEAD
-    helm: |
-      apps:
-      - name: echo-http
-        path: raspberry/overlays/echo-http
+    helm:
+      values: |
+        apps:
+        - name: echo-http
+          path: raspberry/overlays/echo-http
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
