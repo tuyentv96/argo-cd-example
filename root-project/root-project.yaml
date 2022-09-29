@@ -2,17 +2,20 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: root-project
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
+  namespace: argocd
 spec:
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: default
   project: default
   source:
-    path: apps
+    path: application-set
     repoURL: https://github.com/tuyentv96/argo-cd-example
     targetRevision: HEAD
+    helm: |
+      apps:
+      - name: echo-http
+        path: raspberry/overlays/echo-http
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true

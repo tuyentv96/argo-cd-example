@@ -1,0 +1,5 @@
+{{- range $app := .Values.apps }}
+---
+{{- $_ := set $ "app" $app }}
+{{ tpl $.Values.template $ }}
+{{- end }}
