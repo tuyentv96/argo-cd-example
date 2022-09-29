@@ -20,7 +20,7 @@ spec:
           path: raspberry/overlays/echo-http2
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: raspberry
   syncPolicy:
     automated:
       prune: true
