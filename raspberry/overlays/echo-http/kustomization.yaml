@@ -5,7 +5,7 @@ resources:
 - ../../base/echo-http
 
 configMapGenerator:
-- name: app-env
+- name: echo-http
   behavior: merge
   envs:
   - files/app.env
