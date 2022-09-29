@@ -8,7 +8,7 @@ resources:
 - ingress.yaml
 
 configMapGenerator:
-- name: app-env
+- name: echo-http2
   envs:
   - files/app.env
 

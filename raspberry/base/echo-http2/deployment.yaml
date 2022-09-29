@@ -42,5 +42,5 @@ spec:
         # - secretRef:
         #     name: mysecret
         - configMapRef:
-            name: app-env
+            name: echo-http2
 ---
