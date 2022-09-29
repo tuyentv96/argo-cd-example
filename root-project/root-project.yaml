@@ -14,6 +14,8 @@ spec:
         apps:
         - name: echo-http
           path: raspberry/overlays/echo-http
+        - name: echo-http2
+          path: raspberry/overlays/echo-http2
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
