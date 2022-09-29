@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: applicationsets
+  namespace: raspberry
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/tuyentv96/argo-cd-example
+      revision: master
+      directories:
+      - path: raspberry/overlays/*
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      project: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+      source:
+        repoURL: https://github.com/tuyentv96/argo-cd-example
+        targetRevision: master
+        path: '{{path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: raspberry
