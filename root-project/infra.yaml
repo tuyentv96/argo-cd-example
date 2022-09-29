@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: infra
+  namespace: infra
+spec:
+  project: default
+  source:
+    path: infra
+    repoURL: https://github.com/tuyentv96/argo-cd-example
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: infra
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true 
+      allowEmpty: true
+    syncOptions:
+      - CreateNamespace=true
