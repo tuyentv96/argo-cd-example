@@ -6,4 +6,4 @@ resources:
 - pv.yaml
 - pvc.yaml
 - service.yaml
-
+- secrets.yaml
