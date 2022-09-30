@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: job-api
 spec:
-  replicas: 4
+  replicas: 2
   template:
     spec:
       containers:

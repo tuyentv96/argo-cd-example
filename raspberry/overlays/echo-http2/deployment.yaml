@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: echo-http2
 spec:
-  replicas: 4
+  replicas: 2
   template:
     spec:
       containers:
