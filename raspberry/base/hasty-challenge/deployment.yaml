@@ -24,6 +24,7 @@ spec:
         image: nginx
         ports:
         - containerPort: 3000
+        command: "./cli"
         args: ["serve"]
         livenessProbe:
           httpGet:
