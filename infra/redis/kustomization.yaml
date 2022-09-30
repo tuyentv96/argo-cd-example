@@ -5,6 +5,5 @@ resources:
 - deployment.yaml
 - pv.yaml
 - pvc.yaml
-- config.yaml
 - service.yaml
 
