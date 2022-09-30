@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis  # Sets Deployment name
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+        - name: redis
+          image: redis:7.0.5-alpine3.16
+          imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 6379  # Exposes container port
+          args: ["--appendonly", "yes"]
+          env:
+              - name: ALLOW_EMPTY_PASSWORD
+                value: "yes"
+          volumeMounts:
+            - mountPath: /data
+              name: redisdb
+      volumes:
+        - name: redisdb
+          persistentVolumeClaim:
+            claimName: redis-data-claim
