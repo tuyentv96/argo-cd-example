@@ -16,6 +16,8 @@ spec:
           path: raspberry/overlays/echo-http
         - name: echo-http2
           path: raspberry/overlays/echo-http2
+        - name: hasty-challenge
+          path: raspberry/overlays/hasty-challenge
   destination:
     server: https://kubernetes.default.svc
     namespace: raspberry
