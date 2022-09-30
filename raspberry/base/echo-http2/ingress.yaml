@@ -11,7 +11,7 @@ metadata:
 spec:
   tls:
   - hosts:
-    - app.picluster.xyz
+    - echo.picluster.xyz
     secretName: echo-http2-tls
   rules:
   - host: echo.picluster.xyz
