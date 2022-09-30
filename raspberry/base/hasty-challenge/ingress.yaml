@@ -11,7 +11,7 @@ metadata:
 spec:
   tls:
   - hosts:
-    - app.picluster.xyz
+    - job-api.picluster.xyz
     secretName: job-api-tls
   rules:
   - host: job-api.picluster.xyz
