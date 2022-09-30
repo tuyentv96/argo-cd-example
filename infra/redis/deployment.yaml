@@ -18,7 +18,7 @@ spec:
           imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 6379  # Exposes container port
-          args: ["--appendonly", "yes", "--requirepass", "$(REDIS_PASSWORD)"]
+          args: ["--appendonly", "yes", "--requirepass", "mypassword"]
           volumeMounts:
             - mountPath: /data
               name: redisdb
