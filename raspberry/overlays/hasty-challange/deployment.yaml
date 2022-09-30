@@ -1,0 +1,19 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: job-api
+spec:
+  replicas: 4
+  template:
+    spec:
+      containers:
+      - name: job-api
+        resources:
+          requests:
+            memory: "75Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+---
