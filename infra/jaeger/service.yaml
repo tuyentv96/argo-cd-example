@@ -10,9 +10,11 @@ spec:
     - protocol: UDP
       port: 6831
       targetPort: 6831
+      name: udp
     - protocol: TCP
       port: 16686
       targetPort: 16686
+      name: tcp
   selector:
     app: jaeger
   loadBalancerIP: 192.168.1.204
