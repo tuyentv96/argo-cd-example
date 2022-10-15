@@ -17,6 +17,5 @@ spec:
           image: jaegertracing/all-in-one:1.38
           imagePullPolicy: "IfNotPresent"
           ports:
-            - containerPort: 
-              - 6381
-              - 16686
+            - containerPort: 6381
+            - containerPort: 16686
